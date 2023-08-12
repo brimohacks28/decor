@@ -1,0 +1,23 @@
+<div class="banner">
+</div>
+
+
+<!--Productbox-->
+<div class="container mt-4 mb-4">
+  <h1 class="text-center"><span class="highlight" >Featured Products</span></h1>
+  <div class="row">
+    <div class="col-lg-3 mt-3" *ngFor="let pd of ProductData; index as i">
+      <div class="productbox" *ngIf="i<=7">
+        <img src="{{pd.ProductImg}}"/>
+        <h1>{{pd.ProductName}}</h1>
+        <p>{{pd.ProductPrice |currency:" ksh "}}</p>
+      </div>
+    </div>
+  </div>
+</div>
+<a routerLink="decor" class="viewmorebtn"> View More </a>
+
+
+
+
+
